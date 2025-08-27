@@ -4,5 +4,6 @@
 int main()
 {
     std::cout << "Hello, World!\n";
+    std::cout << "Primeiro projeto em C++!\n";
     return 0;
 }
