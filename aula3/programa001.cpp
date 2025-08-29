@@ -14,5 +14,12 @@ int main() {
     cout << "adicao = " << x+y << "\n";
     cout << "subtracao = " << x-y << "\n";
 
+    if (x > y)
+        cout << x << " é maior que " << y << "\n";
+    else if (x < y)
+        cout << x << " é menor que " << y << "\n";
+    else
+        cout << x << " é igual a " << y << "\n";
     return 0;
 }
+// dever de casa um identifidor de par ou Impar
