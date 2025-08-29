@@ -1,0 +1,1 @@
+// uma variavel tem 4 bytes - a não ser se for short, que tem 2 bytesgti 
