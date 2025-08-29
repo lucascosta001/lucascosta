@@ -1,7 +1,12 @@
-bool porta = false;
-bool luz = false;
-bool projetor = false;
-if (porta == true && luz == true)
+int main()
 {
-    projetor = true;
+    bool porta = false;
+    bool luz = false;
+    bool projetor = false;
+    
+    if (porta==true && luz==true)
+    {
+        projetor = true;
+    }
+
 }
