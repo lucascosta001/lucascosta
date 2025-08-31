@@ -5,7 +5,7 @@ int main() {
     cout << "Digite um numero: ";
     cin >> x;
     if(x%2==0)
-        cout << "Par" << "\n";
+        cout << "Voce digitou um numero par" << "\n";
     else if(x%2==1)
-        cout << "Impar" << "\n";
+        cout << "Voce digitou um numero impar" << "\n";
 }
