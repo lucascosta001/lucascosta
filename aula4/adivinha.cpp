@@ -4,43 +4,30 @@
 using namespace std;
 
 int main() {
-    cout << "Bem vindo ao jogo de adivinhação!\n" ;
-    cout << "Tente adivinhar o número que estou pensando entre 1 e 100.\n" ;
+    cout << "Bem vindo ao jogo de adivinhacao!\n" ;
+    cout << "Tente adivinhar o numero que estou pensando entre 1 e 100.\n" ;
     srand(time(0));
     int numero_secreto = rand() % 100 + 1;
     int palpite;
     int tentativas = 0;
-    cout << "Digite seu palpite 1: ";
-    cin >> palpite;
-    tentativas=tentativas+1;
-    if (palpite == numero_secreto) {
-        cout << "Parabéns! Você adivinhou o número.\n";
-        return 0;
-    }
-    
-    cout << "Digite seu palpite 2: ";
-    cin >> palpite;
-    tentativas=tentativas+1;
-    if (palpite == numero_secreto) {
-        cout << "Parabéns! Você adivinhou o número.\n";
-        return 0;
-    }
 
-    cout << "Digite seu palpite 3: ";
-    cin >> palpite;
-    tentativas=tentativas+1;
-    if (palpite == numero_secreto) {
-        cout << "Parabéns! Você adivinhou o número.\n";
-        return 0;
-    }
+    do
+    {
+        cout << "Digite seu palpite: ";
+        cin >> palpite;
+        tentativas++;
+        if (palpite == numero_secreto) {
+            cout << "Parabens! Voce adivinhou o numero.\n";
+            return 0;
+        } else if (palpite < numero_secreto) {
+            cout << "Muito baixo! Tente novamente.\n";
+        } else {
+            cout << "Muito alto! Tente novamente.\n";
+        }
+    } while (tentativas < 3);
 
-
-    // if (palpite < numero_secreto) {
-    //     cout << "Muito baixo! Tente novamente.\n";
-    // } else if (palpite > numero_secreto) {
-    //     cout << "Muito alto! Tente novamente.\n";
-    // }
-    
-    // while (palpite != numero_secreto);
-    cout << "Parabéns! Você adivinhou o número.\n";
+    cout << "Suas tentativas acabaram! O numero era " << numero_secreto << ".\n";
+    return 0;
 }
+
+// Programa de adivinhação de número
