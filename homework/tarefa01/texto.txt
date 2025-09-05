@@ -1,0 +1,66 @@
+1. Crie um programa chamado tarefacasa01<matricula>.cpp. Em
+<matricula> escreva sua matrícula.
+2. É obrigatória a utilização de comentários no seu código,
+explicando os passos para chegar a solução.
+3. Não se esqueça de colocar seu nome e matrícula no programa.
+4. Programas que não compilam não serão corrigidos e assim terão
+nota 0 (zero).
+5. O programa deve ser enviado pelo SIGAA via opção “Tarefas”
+na disciplina Computação para Engenharia CPE Turma A (ENE
+0334). Programas enviados por outros meios serão
+desconsiderados e assim terão nota 0 (zero).
+6. É responsabilidade de cada aluno verificar se o arquivo enviado é
+o correto. O prazo de envio será quinta-feira 11.09 as 23:55.
+Você deve enviar o arquivo tarefacasa01<matricula>.cpp
+
+Enunciado do Programa: Cifra de César (Criptografia Simples)
+com Variáveis e Condicionais
+A Cifra de César é uma das técnicas de criptografia mais antigas e
+simples da história, criada e utilizada pelo imperador romano Júlio
+César para proteger suas comunicações militares. Essa técnica consiste
+em substituir cada letra do texto original por outra letra posicionada em
+um número fixo de lugares adiante no alfabeto.
+
+Por exemplo, se o deslocamento for de 3 posições, a letra A será
+substituída pela letra D, a letra B pela letra E, e assim por diante,
+retornando ao início do alfabeto quando o final for alcançado. Esse
+método, apesar de elementar para os padrões atuais, revolucionou a
+comunicação da época, garantindo que apenas aqueles que conheciam
+o segredo do deslocamento pudessem compreender as mensagens.
+Desenvolva um programa em C/C++ que:
+1. Receba uma mensagem numérica (sequênciade de 5 números
+inteiros representando letras, 0=A, 1=B, ..., 25=Z). Verificar se
+cada uma das 5 entradas tem valor entre 0 e 25. Se não tiver
+mostrar uma mensagem de erro e sair do programa. (Valor: 0,5
+ponto)
+2. Receba uma chave numérica inteira para deslocamento com valor
+máximo de 7. Verificar se o número digitado é menor ou igual a
+7. Caso não seja mostrar uma mensagem de erro e sair do
+programa. (Valor: 0,5 ponto)
+3. Calcule a mensagem cifrada aplicando o deslocamento (cifra de
+César) aos números usando operações aritméticas básicas.
+(Valor: 3 pontos)
+4. Utilize somente variáveis inteiras e estruturas condicionais ifthen-else para garantir que o valor cifrado esteja entre 0 e 25
+(fazendo ajustes quando passar de 25, para "voltar ao início
+0").(Valor: 1 ponto)
+5. Decifre a mensagem cifrada usando o inverso do deslocamento,
+também com if-then-else para ajustes (Valor: 3 pontos).
+6. Mostre as mensagens cifrada (Valor: 1 ponto) e decifrada
+(Valor: 1 ponto).
+
+Requisitos:
+7. Usar variáveis inteiras para armazenar os valores da mensagem e
+chave.
+8. Usar if-else para limitar os valores ao intervalo 0-25 (módulo 26).
+9. Sem usar laços (for, while), operações apenas em variáveis
+inteiras sem usar vetores.
+Exemplo de teste:
+Entrada:
+m0=2,m1=4,m2=11,m3=11,m4=14 (que correspondem às letras C, E,
+L, L, O respectivamente
+Chave (deslocamento): 3
+Cifragem:
+Mensagem cifrada: 5 7 14 14 17
+
+Decifragem:
+Mensagem decifrada: 2 4 11 11 14 (mensagem original)
