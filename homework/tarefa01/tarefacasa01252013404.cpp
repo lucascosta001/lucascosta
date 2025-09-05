@@ -76,26 +76,25 @@ int main(){
     int cripto1, cripto2, cripto3, cripto4, cripto5; // variaveis dos numeros criptografados
     cripto1 = (n1 + chave); // formula para criptografar
     // ou seja se o valor n1 for 3 e a chave 6, entao vai a 9, 3 e c, 9 e i
-    if (cripto1 > 25){
-        cripto1 = cripto1 - 25;
+    if (cripto1 > 25){  // testa se o velor passou de 25, se sim subtrai 25 para voltar a 0
+        cripto1 = cripto1 - 26;
     }
     cripto2 = (n2 + chave); // formula para criptografar
-    if (cripto2 >= 25){
-        cripto2 = cripto2 - 25;
+    if (cripto2 > 25){
+        cripto2 = cripto2 - 26;
     }
     cripto3 = (n3 + chave); // formula para criptografar
-    if (cripto3 >= 25){
-        cripto3 = cripto3 - 25;
+    if (cripto3 > 25){
+        cripto3 = cripto3 - 26;
     }
     cripto4 = (n4 + chave); // formula para criptografar
-    if (cripto4 >= 25){
-        cripto4 = cripto4 - 25;
+    if (cripto4 > 25){
+        cripto4 = cripto4 - 26;
     }
     cripto5 = (n5 + chave); // formula para criptografar
-    if (cripto5 >= 25){
-        cripto5 = cripto5 - 25;
+    if (cripto5 > 25){
+        cripto5 = cripto5 - 26;
     }
-    
 
     cout << cripto1 << ", " << cripto2 << ", " << cripto3 << ", " << cripto4 << ", " << cripto5 << "\n";
     return 0;
