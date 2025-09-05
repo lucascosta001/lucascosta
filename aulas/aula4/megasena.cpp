@@ -7,7 +7,7 @@ int main(){
     cout << "Bem vindo ao jogo da Grande sena!!!\n";
     cout << "Digite 10 numeros entre 1 e 60: \n";
     
-
+// aqui pode colocar uma estrutura de repeticao usando array
     int ale1, ale2, ale3, ale4, ale5, ale6;
     cout << "Digite o primeiro numero :";
     cin >> ale1;
@@ -21,7 +21,7 @@ int main(){
     cin >> ale5;
     cout << "Digite o primeiro sexto :";
     cin >> ale6;
-
+// Array tambem aqui
     int n1,n2,n3,n4,n5,n6;
     n1 = rand() % 60 + 1;
     n2 = rand() % 60 + 1;
@@ -32,7 +32,7 @@ int main(){
     cout << "Numeros sorteados: " << n1 << " " << n2 << " " << n3 << " " << n4 << " " << n5 << " " << n6 << "\n";
 
     int acertos = 0;
-    
+//  aqui cabe um for
     if (ale1 == n1 || ale1 == n2 || ale1 == n3 || ale1 == n4 || ale1 == n5 || ale1 == n6) {
         cout << "Parabens, voce acertou o primeiro numero!!! \n";
         cout << "Numero 1: " << ale1 << "\n";
