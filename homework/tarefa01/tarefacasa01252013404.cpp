@@ -2,6 +2,9 @@
 using namespace std;
 // Lucas Alan Costa Novais - 252013404
 int main(){
+
+// Falta fazer a parte de descriptografia, mas o programa ja esta funcionando, so falta otimizar o codigo - comentar.
+
     // Primeira etapa
     int n1, n2, n3, n4, n5; // variaveis dos numeros escolhidos
 
@@ -12,7 +15,7 @@ int main(){
         return 0; 
     }
 
-/*  Desta maneira da para reescrever sem precisar feixar o programa! Mas como foi pedido para feichar o programa se o numero for invalido, deixei comentado.
+/*  Desta maneira da para reescrever sem precisar fechar o programa! Mas como foi pedido para fechar o programa se o numero for invalido, deixei comentado.
     if (n1 < 0 || n1 > 25) { // teste para ver so o numeto esta entre 0 e 25
         cout << "Numero invalido. Por favor, digite um numero entre 0 e 25: \n";
         cin >> n1;
@@ -25,7 +28,7 @@ int main(){
         cout << "Numero invalido. Por favor, digite um numero entre 0 e 25.\n";
         return 0;
     }
-    
+
     cout << "Digite mais um numero inteiro de 0 a 25: ";
     cin >> n3; 
     if (n3 < 0 || n3 > 25) {
@@ -47,19 +50,19 @@ int main(){
         return 0; 
     }
 
-    cout << "Os numeros digitados nao criptografados sao: " << n1 << ", " << n2 << ", " << n3 << ", " << n4 << ", " << n5 << "\n"; // mostra os numeros digitados
+    cout << "Os numeros digitadossao: " << n1 << ", " << n2 << ", " << n3 << ", " << n4 << ", " << n5 << "\n"; // mostra os numeros digitados
 
 // Segunda etapa
 
     int chave; // variavel para a criptografia
     cout << "Digite um valor inteiro de 1 a 7: \n";
     cin >> chave;
-    if (chave < 1 || chave > 7) {
+    if (chave < 1 || chave > 7) { // teste para ver se o numero esta entre 1 e 7
         cout << "Valor invalido. Por favor, digite um valor entre 1 e 7.\n";
         return 0;
     }
     
-// Terceira etapa
+// Terceira etapa Aplicando ajustes
 
     int cripto1, cripto2, cripto3, cripto4, cripto5; // variaveis dos numeros criptografados
     cripto1 = (n1 + chave); // formula para criptografar
@@ -83,8 +86,32 @@ int main(){
     if (cripto5 > 25){
         cripto5 = cripto5 - 26;
     }
+    
+    int descripto1, descripto2, descripto3, descripto4, descripto5; // variaveis dos numeros descriptografados
+    descripto1 = (cripto1 - chave);
+    if (descripto1 < 0){
+        descripto1 = descripto1 + 26;
+    }
+    descripto2 = (cripto2 - chave);
+    if (descripto2 < 0){
+        descripto2 = descripto2 + 26;
+    }
+    descripto3 = (cripto3 - chave);
+    if (descripto3 < 0){
+        descripto3 = descripto3 + 26;
+    }
+    descripto4 = (cripto4 - chave);
+    if (descripto4 < 0){
+        descripto4 = descripto4 + 26;
+    }
+    descripto5 = (cripto5 - chave);
+    if (descripto5 < 0){
+        descripto5 = descripto5 + 26;
+    }
 
     cout << "Os numeros criptografados sao: " << cripto1 << ", " << cripto2 << ", " << cripto3 << ", " << cripto4 << ", " << cripto5 << "\n";
+
+    // Aplicando a cerifa de cesar - mostrando as letras correspondentes aos numeros
 
     int a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z; // variaveis para representar as letras
     a = 0;  b = 1;  c = 2;  d = 3;  e = 4;  f = 5;  g = 6;  h = 7;  i = 8;  j = 9; k = 10; l = 11; m = 12; n = 13; o = 14; p = 15; q = 16; r = 17; s = 18; t = 19; u = 20; v = 21; w = 22; x = 23; y = 24; z = 25;
@@ -117,6 +144,7 @@ int main(){
     if (cripto1 == x){ cout << "x "; }
     if (cripto1 == y){ cout << "y "; }
     if (cripto1 == z){ cout << "z "; }
+
     if (cripto2 == a){ cout << "a "; }
     if (cripto2 == b){ cout << "b "; }
     if (cripto2 == c){ cout << "c "; }
@@ -143,6 +171,7 @@ int main(){
     if (cripto2 == x){ cout << "x "; }
     if (cripto2 == y){ cout << "y "; }
     if (cripto2 == z){ cout << "z "; }
+
     if (cripto3 == a){ cout << "a "; }
     if (cripto3 == b){ cout << "b "; }
     if (cripto3 == c){ cout << "c "; }
@@ -169,6 +198,7 @@ int main(){
     if (cripto3 == x){ cout << "x "; }
     if (cripto3 == y){ cout << "y "; }
     if (cripto3 == z){ cout << "z "; }
+
     if (cripto4 == a){ cout << "a "; }
     if (cripto4 == b){ cout << "b "; }
     if (cripto4 == c){ cout << "c "; }
@@ -195,6 +225,7 @@ int main(){
     if (cripto4 == x){ cout << "x "; }
     if (cripto4 == y){ cout << "y "; }
     if (cripto4 == z){ cout << "z "; }
+
     if (cripto5 == a){ cout << "a "; }
     if (cripto5 == b){ cout << "b "; }
     if (cripto5 == c){ cout << "c "; }
@@ -222,139 +253,144 @@ int main(){
     if (cripto5 == y){ cout << "y "; }
     if (cripto5 == z){ cout << "z "; }
 
+    // Descriptografando a mensagem
     cout << "\n";
     cout << "Mensagem Descriptografada: \n";
 
-    if (n1 == a){ cout << "a "; }       
-    if (n1 == b){ cout << "b "; }
-    if (n1 == c){ cout << "c "; }
-    if (n1 == d){ cout << "d "; }
-    if (n1 == e){ cout << "e "; }
-    if (n1 == f){ cout << "f "; }
-    if (n1 == g){ cout << "g "; }
-    if (n1 == h){ cout << "h "; }
-    if (n1 == i){ cout << "i "; }
-    if (n1 == j){ cout << "j "; }
-    if (n1 == k){ cout << "k "; }
-    if (n1 == l){ cout << "l "; }
-    if (n1 == m){ cout << "m "; }
-    if (n1 == n){ cout << "n "; }
-    if (n1 == o){ cout << "o "; }
-    if (n1 == p){ cout << "p "; }
-    if (n1 == q){ cout << "q "; }
-    if (n1 == r){ cout << "r "; }
-    if (n1 == s){ cout << "s "; }
-    if (n1 == t){ cout << "t "; }
-    if (n1 == u){ cout << "u "; }
-    if (n1 == v){ cout << "v "; }
-    if (n1 == w){ cout << "w "; }
-    if (n1 == x){ cout << "x "; }
-    if (n1 == y){ cout << "y "; }
-    if (n1 == z){ cout << "z "; }
-    if (n2 == a){ cout << "a "; }
-    if (n2 == b){ cout << "b "; }
-    if (n2 == c){ cout << "c "; }
-    if (n2 == d){ cout << "d "; }
-    if (n2 == e){ cout << "e "; }
-    if (n2 == f){ cout << "f "; }
-    if (n2 == g){ cout << "g "; }
-    if (n2 == h){ cout << "h "; }
-    if (n2 == i){ cout << "i "; }
-    if (n2 == j){ cout << "j "; }
-    if (n2 == k){ cout << "k "; }
-    if (n2 == l){ cout << "l "; }
-    if (n2 == m){ cout << "m "; }
-    if (n2 == n){ cout << "n "; }
-    if (n2 == o){ cout << "o "; }
-    if (n2 == p){ cout << "p "; }
-    if (n2 == q){ cout << "q "; }
-    if (n2 == r){ cout << "r "; }
-    if (n2 == s){ cout << "s "; }
-    if (n2 == t){ cout << "t "; }
-    if (n2 == u){ cout << "u "; }
-    if (n2 == v){ cout << "v "; }
-    if (n2 == w){ cout << "w "; }
-    if (n2 == x){ cout << "x "; }
-    if (n2 == y){ cout << "y "; }
-    if (n2 == z){ cout << "z "; }
-    if (n3 == a){ cout << "a "; }
-    if (n3 == b){ cout << "b "; }
-    if (n3 == c){ cout << "c "; }
-    if (n3 == d){ cout << "d "; }
-    if (n3 == e){ cout << "e "; }
-    if (n3 == f){ cout << "f "; }
-    if (n3 == g){ cout << "g "; }
-    if (n3 == h){ cout << "h "; }
-    if (n3 == i){ cout << "i "; }
-    if (n3 == j){ cout << "j "; }
-    if (n3 == k){ cout << "k "; }
-    if (n3 == l){ cout << "l "; }
-    if (n3 == m){ cout << "m "; }
-    if (n3 == n){ cout << "n "; }
-    if (n3 == o){ cout << "o "; }
-    if (n3 == p){ cout << "p "; }
-    if (n3 == q){ cout << "q "; }
-    if (n3 == r){ cout << "r "; }
-    if (n3 == s){ cout << "s "; }
-    if (n3 == t){ cout << "t "; }
-    if (n3 == u){ cout << "u "; }
-    if (n3 == v){ cout << "v "; }
-    if (n3 == w){ cout << "w "; }
-    if (n3 == x){ cout << "x "; }
-    if (n3 == y){ cout << "y "; }
-    if (n3 == z){ cout << "z "; }
-    if (n4 == a){ cout << "a "; }
-    if (n4 == b){ cout << "b "; }
-    if (n4 == c){ cout << "c "; }
-    if (n4 == d){ cout << "d "; }
-    if (n4 == e){ cout << "e "; }
-    if (n4 == f){ cout << "f "; }
-    if (n4 == g){ cout << "g "; }
-    if (n4 == h){ cout << "h "; }
-    if (n4 == i){ cout << "i "; }
-    if (n4 == j){ cout << "j "; }
-    if (n4 == k){ cout << "k "; }
-    if (n4 == l){ cout << "l "; }
-    if (n4 == m){ cout << "m "; }
-    if (n4 == n){ cout << "n "; }
-    if (n4 == o){ cout << "o "; }
-    if (n4 == p){ cout << "p "; }
-    if (n4 == q){ cout << "q "; }
-    if (n4 == r){ cout << "r "; }
-    if (n4 == s){ cout << "s "; }
-    if (n4 == t){ cout << "t "; }
-    if (n4 == u){ cout << "u "; }
-    if (n4 == v){ cout << "v "; }
-    if (n4 == w){ cout << "w "; }
-    if (n4 == x){ cout << "x "; }
-    if (n4 == y){ cout << "y "; }
-    if (n4 == z){ cout << "z "; }
-    if (n5 == a){ cout << "a "; }
-    if (n5 == b){ cout << "b "; }
-    if (n5 == c){ cout << "c "; }
-    if (n5 == d){ cout << "d "; }
-    if (n5 == e){ cout << "e "; }
-    if (n5 == f){ cout << "f "; }
-    if (n5 == g){ cout << "g "; }
-    if (n5 == h){ cout << "h "; }
-    if (n5 == i){ cout << "i "; }
-    if (n5 == j){ cout << "j "; }
-    if (n5 == k){ cout << "k "; }
-    if (n5 == l){ cout << "l "; }
-    if (n5 == m){ cout << "m "; }
-    if (n5 == n){ cout << "n "; }
-    if (n5 == o){ cout << "o "; }
-    if (n5 == p){ cout << "p "; }
-    if (n5 == q){ cout << "q "; }
-    if (n5 == r){ cout << "r "; }
-    if (n5 == s){ cout << "s "; }
-    if (n5 == t){ cout << "t "; }
-    if (n5 == u){ cout << "u "; }
-    if (n5 == v){ cout << "v "; }
-    if (n5 == w){ cout << "w "; }
-    if (n5 == x){ cout << "x "; }
-    if (n5 == y){ cout << "y "; }
-    if (n5 == z){ cout << "z "; }
+    if (descripto1 == a){ cout << "a "; }       
+    if (descripto1 == b){ cout << "b "; }
+    if (descripto1 == c){ cout << "c "; }
+    if (descripto1 == d){ cout << "d "; }
+    if (descripto1 == e){ cout << "e "; }
+    if (descripto1 == f){ cout << "f "; }
+    if (descripto1 == g){ cout << "g "; }
+    if (descripto1 == h){ cout << "h "; }
+    if (descripto1 == i){ cout << "i "; }
+    if (descripto1 == j){ cout << "j "; }
+    if (descripto1 == k){ cout << "k "; }
+    if (descripto1 == l){ cout << "l "; }
+    if (descripto1 == m){ cout << "m "; }
+    if (descripto1 == n){ cout << "n "; }
+    if (descripto1 == o){ cout << "o "; }
+    if (descripto1 == p){ cout << "p "; }
+    if (descripto1 == q){ cout << "q "; }
+    if (descripto1 == r){ cout << "r "; }
+    if (descripto1 == s){ cout << "s "; }
+    if (descripto1 == t){ cout << "t "; }
+    if (descripto1 == u){ cout << "u "; }
+    if (descripto1 == v){ cout << "v "; }
+    if (descripto1 == w){ cout << "w "; }
+    if (descripto1 == x){ cout << "x "; }
+    if (descripto1 == y){ cout << "y "; }
+    if (descripto1 == z){ cout << "z "; }
+
+    if (descripto2 == a){ cout << "a "; }
+    if (descripto2 == b){ cout << "b "; }
+    if (descripto2 == c){ cout << "c "; }
+    if (descripto2 == d){ cout << "d "; }
+    if (descripto2 == e){ cout << "e "; }
+    if (descripto2 == f){ cout << "f "; }
+    if (descripto2 == g){ cout << "g "; }
+    if (descripto2 == h){ cout << "h "; }
+    if (descripto2 == i){ cout << "i "; }
+    if (descripto2 == j){ cout << "j "; }
+    if (descripto2 == k){ cout << "k "; }
+    if (descripto2 == l){ cout << "l "; }
+    if (descripto2 == m){ cout << "m "; }
+    if (descripto2 == n){ cout << "n "; }
+    if (descripto2 == o){ cout << "o "; }
+    if (descripto2 == p){ cout << "p "; }
+    if (descripto2 == q){ cout << "q "; }
+    if (descripto2 == r){ cout << "r "; }
+    if (descripto2 == s){ cout << "s "; }
+    if (descripto2 == t){ cout << "t "; }
+    if (descripto2 == u){ cout << "u "; }
+    if (descripto2 == v){ cout << "v "; }
+    if (descripto2 == w){ cout << "w "; }
+    if (descripto2 == x){ cout << "x "; }
+    if (descripto2 == y){ cout << "y "; }
+    if (descripto2 == z){ cout << "z "; }
+
+    if (descripto3 == a){ cout << "a "; }
+    if (descripto3 == b){ cout << "b "; }
+    if (descripto3 == c){ cout << "c "; }
+    if (descripto3 == d){ cout << "d "; }
+    if (descripto3 == e){ cout << "e "; }
+    if (descripto3 == f){ cout << "f "; }
+    if (descripto3 == g){ cout << "g "; }
+    if (descripto3 == h){ cout << "h "; }
+    if (descripto3 == i){ cout << "i "; }
+    if (descripto3 == j){ cout << "j "; }
+    if (descripto3 == k){ cout << "k "; }
+    if (descripto3 == l){ cout << "l "; }
+    if (descripto3 == m){ cout << "m "; }
+    if (descripto3 == n){ cout << "n "; }
+    if (descripto3 == o){ cout << "o "; }
+    if (descripto3 == p){ cout << "p "; }
+    if (descripto3 == q){ cout << "q "; }
+    if (descripto3 == r){ cout << "r "; }
+    if (descripto3 == s){ cout << "s "; }
+    if (descripto3 == t){ cout << "t "; }
+    if (descripto3 == u){ cout << "u "; }
+    if (descripto3 == v){ cout << "v "; }
+    if (descripto3 == w){ cout << "w "; }
+    if (descripto3 == x){ cout << "x "; }
+    if (descripto3 == y){ cout << "y "; }
+    if (descripto3 == z){ cout << "z "; }
+
+    if (descripto4 == a){ cout << "a "; }
+    if (descripto4 == b){ cout << "b "; }
+    if (descripto4 == c){ cout << "c "; }
+    if (descripto4 == d){ cout << "d "; }
+    if (descripto4 == e){ cout << "e "; }
+    if (descripto4 == f){ cout << "f "; }
+    if (descripto4 == g){ cout << "g "; }
+    if (descripto4 == h){ cout << "h "; }
+    if (descripto4 == i){ cout << "i "; }
+    if (descripto4 == j){ cout << "j "; }
+    if (descripto4 == k){ cout << "k "; }
+    if (descripto4 == l){ cout << "l "; }
+    if (descripto4 == m){ cout << "m "; }
+    if (descripto4 == n){ cout << "n "; }
+    if (descripto4 == o){ cout << "o "; }
+    if (descripto4 == p){ cout << "p "; }
+    if (descripto4 == q){ cout << "q "; }
+    if (descripto4 == r){ cout << "r "; }
+    if (descripto4 == s){ cout << "s "; }
+    if (descripto4 == t){ cout << "t "; }
+    if (descripto4 == u){ cout << "u "; }
+    if (descripto4 == v){ cout << "v "; }
+    if (descripto4 == w){ cout << "w "; }
+    if (descripto4 == x){ cout << "x "; }
+    if (descripto4 == y){ cout << "y "; }
+    if (descripto4 == z){ cout << "z "; }
+
+    if (descripto5 == a){ cout << "a "; }
+    if (descripto5 == b){ cout << "b "; }
+    if (descripto5 == c){ cout << "c "; }
+    if (descripto5 == d){ cout << "d "; }
+    if (descripto5 == e){ cout << "e "; }
+    if (descripto5 == f){ cout << "f "; }
+    if (descripto5 == g){ cout << "g "; }
+    if (descripto5 == h){ cout << "h "; }
+    if (descripto5 == i){ cout << "i "; }
+    if (descripto5 == j){ cout << "j "; }
+    if (descripto5 == k){ cout << "k "; }
+    if (descripto5 == l){ cout << "l "; }
+    if (descripto5 == m){ cout << "m "; }
+    if (descripto5 == n){ cout << "n "; }
+    if (descripto5 == o){ cout << "o "; }
+    if (descripto5 == p){ cout << "p "; }
+    if (descripto5 == q){ cout << "q "; }
+    if (descripto5 == r){ cout << "r "; }
+    if (descripto5 == s){ cout << "s "; }
+    if (descripto5 == t){ cout << "t "; }
+    if (descripto5 == u){ cout << "u "; }
+    if (descripto5 == v){ cout << "v "; }
+    if (descripto5 == w){ cout << "w "; }
+    if (descripto5 == x){ cout << "x "; }
+    if (descripto5 == y){ cout << "y "; }
+    if (descripto5 == z){ cout << "z "; }
     return 0;
 }
 // Lucas Alan Costa Novais - 252013404
