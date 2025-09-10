@@ -2,9 +2,6 @@
 using namespace std;
 // Lucas Alan Costa Novais - 252013404
 int main(){
-
-// Falta fazer a parte de descriptografia, mas o programa ja esta funcionando, so falta otimizar o codigo - comentar.
-
     // Primeira etapa
     int n1, n2, n3, n4, n5; // variaveis dos numeros escolhidos
 
