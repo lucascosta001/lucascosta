@@ -10,12 +10,13 @@ int main() {
     i=frase.length(); // length da frase
     cout << "A frase digitada foi: " << frase << "\n";
 
-    for (int e = 0; e < i; e++) { // Converter para minúsculas
+    /* for (int e = 0; e < i; e++) { // Converter para minúsculas
         frase[e] = tolower(frase[e]);
-    }
-
+    } */
+    
     while (j < i) // Percorrer a frase
     {
+        frase[j] = tolower(frase[j]);
         if (frase[j] == 'a' || frase[j] == 'e' || frase[j] == 'i' || frase[j] == 'o' || frase[j] == 'u') // Verificar vogais
         {
             cout << "A letra cujo a posicao " << j << " e: ";
