@@ -115,7 +115,7 @@ int main(){
     cout << "A mensagem Criptografada e: \n";
 
     // Abaixo uma serie de testes para ver qual letra corresponde ao numero criptografado
-    if (cripto1 == a){ cout << "a "; }       
+    if (cripto1 == a){ cout << "a "; }
     if (cripto1 == b){ cout << "b "; }
     if (cripto1 == c){ cout << "c "; }
     if (cripto1 == d){ cout << "d "; }
