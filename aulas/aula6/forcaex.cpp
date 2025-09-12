@@ -24,20 +24,22 @@ int main() {
         cin >> letra;
         letra = tolower(letra);
 
+        bool achou = false;
         for (int j = 0; j < palavra.length(); j++) { // tentar achar a letra na palavra
             if (palavra[j] == letra) {
                 cout << "Voce acertou a letra " << letra << " na posicao " << j << "!\n";
+                achou = true;
                 encontrou++; // contar letras acertadas para comparar com o tamanho da palavra e finalizar o jogo
-            } else {
-                cout << "Tente novamente.\n";
-            }
-
-            if (encontrou == palavra.length()) { // teste de fim de jogo
-                cout << "Parabens! Voce acertou a palavra: " << palavra << "\n";
-                break;
             }
         }
-        i++;
+        if (!achou) {
+            cout << "Voce errou a letra " << letra << "!\n";
+        }
+
+        if (encontrou == palavra.length()) { // teste de fim de jogo
+            cout << "Parabens! Voce acertou a palavra: " << palavra << "\n";
+            break;
+        }
     }
     
 }
