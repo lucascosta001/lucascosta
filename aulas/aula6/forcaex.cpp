@@ -1,14 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-
+// string == array de charg=
 int main() {
     int i = 0, encontrou = 0; 
     char letra;
     string palavra;
 
-    cout << "Voce e o primeiro jogador!\n";
-    cout << "Digite um palavra: ";
+    cout << "Voce e o primeiro jogador!\n" << "Digite um palavra: ";
     getline(cin, palavra);
     system("cls"); // limpar tela
     
