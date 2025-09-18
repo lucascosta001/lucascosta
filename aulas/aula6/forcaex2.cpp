@@ -30,12 +30,13 @@ int main() {
                 cout << "Voce acertou a letra " << letra << " na posicao " << j << "!\n";
                 achou = true;
                 encontrou++; // contar letras acertadas para comparar com o tamanho da palavra e finalizar o jogo
+                cout << "Letras encontradas: " << letra;
             }
         }
         if (!achou) {
             cout << "Voce errou a letra " << letra << "!\n";
         }
-
+        
         if (encontrou >= palavra.length()) { // teste de fim de jogo
             cout << "Parabens! Voce acertou a palavra: " << palavra << "\n";
             return 1;
