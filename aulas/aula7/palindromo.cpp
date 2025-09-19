@@ -9,7 +9,7 @@ int main(){
     for(int c=word.length()-1; c>=0; c--) {
         concatena=concatena+word[c];
     }
-    if (palavra == concatena){
+    if (word == concatena){
         cout << "A palavra " << word << " e um palindromo!";
     } else {
         cout << "A palavra " << word << " nao e um palindromo!";
