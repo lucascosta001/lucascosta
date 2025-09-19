@@ -2,11 +2,17 @@
 using namespace std;
 
 int main(){
-    string word;
     cout << "Digite uma palavra: ";
-    getline(cin, word);
-    string word2;
-    for(int i; word.length > 0; i--) {
-        ne
+    string word;
+    cin >> word;
+    string concatena="";
+    for(int c=word.length()-1; c>=0; c--) {
+        concatena=concatena+word[c];
     }
+    if (palavra == concatena){
+        cout << "A palavra " << word << " e um palindromo!";
+    } else {
+        cout << "A palavra " << word << " nao e um palindromo!";
+    }
+    return 0;
 }
