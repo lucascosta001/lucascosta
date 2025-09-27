@@ -1,27 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    // numeros triangulares, Eles são formados pela soma de números naturais consecutivos,
-    // dada por Tₙ = n(n + 1) / 2
-    int num=0;
+int main(){// numeros triangulares, Eles são formados pela soma de números naturais consecutivos, dada por Tₙ = n(n + 1) / 2
     cout << "digite um numero inteiro, para saber se e triangular: ";
+    int num=0, soma;
     cin >> num;
-    int tria;
-    tria=1;
-    for (int i = 1; i < num; i++)
-    {
-        cout << i << "\n";
-        cout << tria;
-        if (tria==num){
-            cout << "funcionou";
-        }
-        tria = tria+(tria+1);
+    for (int i = 0; i < num; i++){
+        soma = soma + i;
+        if (soma == num){
+            cout << num << " e triangular!";
+            return 0;
+        }       
     }
+    cout << num << " nao e triangular!";
     return 0;    
 }
 
 // n_posicão e n+(n-1) =
 
 // n = n+(n+1)
-// se n = ao input do usuario entao e um numero triangular, caso contrario nao es
+// se n = ao input do usuario entao e um numero triangular, caso contrario nao e
