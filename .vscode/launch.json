@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Codigos/lucascosta/aulas/aula7",
-      "program": "d:/Codigos/lucascosta/aulas/aula7/build/Debug/outDebug",
+      "cwd": "d:/Codigos/lucascosta/myprojects/projetosala/desafios/desafio1",
+      "program": "d:/Codigos/lucascosta/myprojects/projetosala/desafios/desafio1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
