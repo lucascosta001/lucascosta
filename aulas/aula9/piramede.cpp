@@ -2,17 +2,36 @@
 using namespace std;
 
 int main(){
-    cout << "Digite a altura inteira da piramede: ";
-    int h = 0, nivel=0, espacos = 0;
-    cin >> h;
-    for (int i = 0; i < h; i++){
-        nivel = 2 * (i + 1), espacos = h - i - 1;
-        for (int c = 0; c < espacos; c++){ // tira os asteristicos na tela
-            cout << " ";
+    int altura = 0;
+    cout << "Digite a altura da arvore: ";
+    cin >> altura;
+
+    int lastRow = altura * 2;
+
+    for (int i = 1; i <= altura; i++)
+    {
+        int numAst = i * 2;
+        int numEspaces = lastRow - numAst;
+        int half = numEspaces / 2;
+
+        string line = "";
+        for (int o = 0; o < half; o++)
+        {
+            line += ' ';
         }
-        for (int c = 0; c < nivel; c++){ // mostrar os asteristicos na tela
-            cout << "*";
+
+        for (int o = 0; o < numAst; o++)
+        {
+            line += '*';
         }
-        cout << "\n";
+       /* for (int o = 0; o < half; o++)
+        {
+            line += ' ';
+        }*/
+
+        cout << line << endl;
     }
+
+    system("pause");
+    return 0;
 }
