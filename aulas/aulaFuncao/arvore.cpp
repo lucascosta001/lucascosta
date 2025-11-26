@@ -1,5 +1,5 @@
 #include <iostream>
-#include "..\minhabiblioteca\bibliteca.h"
+#include "..\minhabiblioteca\biblioteca.h"
 using namespace std;
 
 int main(){
