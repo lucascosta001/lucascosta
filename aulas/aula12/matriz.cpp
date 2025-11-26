@@ -18,22 +18,22 @@ int main() {
         }
         cout << endl;
     }
-    int soma1 = 0, soma2=0;
+    int somadiag = 0, somadiagrev=0;
     for (int linha = 0; linha < n; linha++)
     {
         for (int coluna = 0; coluna < n; coluna++)
         {
             if (linha==coluna)
             {
-                soma1 += matriz[linha][coluna];
+                somadiag += matriz[linha][coluna];
             }
             if (linha+coluna==n-1)
             {
-                soma2 += matriz[linha][coluna];
+                somadiagrev += matriz[linha][coluna];
             }
         }
     }
-    cout << "Soma da Diagonal Principal: " << soma1 << endl;
-    cout << "Soma da Diagonal Secundaria: " << soma2 << endl;
+    cout << "Soma da Diagonal: " << somadiag << endl;
+    cout << "Soma da Diagonal reversa: " << somadiagrev << endl;
     return 0;
 }
