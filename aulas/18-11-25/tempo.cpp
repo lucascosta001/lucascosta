@@ -1,6 +1,6 @@
 #include <iostream>
 #include <time.h>
-#include "C:\Users\lucas\Documentos\estudos\unb\c++\lucascosta\aulas\minhabiblioteca\biblioteca.h"
+#include "C:\Users\lucas\Documentos\estudos\unb\c++\lucascosta\minhabiblioteca\biblioteca.h"
 using namespace std;
 
 int main() {
